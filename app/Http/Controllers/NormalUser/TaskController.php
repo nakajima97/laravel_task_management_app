@@ -11,7 +11,9 @@ class TaskController extends Controller
 {
     public function index()
     {
-        return view('NormalUser.tasks');
+        $tasks = Tasks::where('user_id', Auth::id())->get()->toArray();
+
+        return view('NormalUser.tasks', ['tasks' => $tasks]);
     }
 
     public function store(Request $request)

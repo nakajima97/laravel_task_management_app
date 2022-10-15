@@ -5,3 +5,9 @@
     <textarea name="task_description" id="task_description" cols="30" rows="10"></textarea>
     <button type="submit">追加</button>
 </form>
+@foreach ($tasks as $task)
+    <div>
+        <p>{{ $task['title'] }}</p>
+        <p>{{ $task['description'] }}</p>
+    </div>
+@endforeach
