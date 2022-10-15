@@ -24,7 +24,7 @@ Laravel でタスク管理アプリを作成した
 
 ## 開発環境
 
-Laravel Sail を使用しているので以下コマンドで実行可能
-`./vendor/bin/sail up`
-エイリアス登録してあるなら
-`sail up`
+Laravel Sail を使用しているので以下コマンドで実行可能  
+`./vendor/bin/sail up`  
+エイリアス登録してあるなら  
+`sail up`  
