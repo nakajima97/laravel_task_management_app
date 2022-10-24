@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('title');
             $table->string('description')->nullable();
             $table->foreignId('user_id');
-            $table->boolean('is_deleted')->default(false);
+            $table->softDeletes();
             $table->boolean('is_finished')->default(false);
             $table->timestamps();
         });

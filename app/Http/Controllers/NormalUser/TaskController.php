@@ -28,4 +28,11 @@ class TaskController extends Controller
 
         return redirect('/normal-user/tasks');
     }
+
+    public function destroy($id)
+    {
+        Tasks::findOrFail($id)->delete();
+
+        return redirect('/normal-user/tasks');
+    }
 }
