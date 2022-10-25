@@ -24,6 +24,7 @@ Route::get('/dashboard', function () {
 Route::get('/normal-user/tasks', [App\Http\Controllers\NormalUser\TaskController::class, 'index']);
 Route::post('/normal-user/tasks/store', [App\Http\Controllers\NormalUser\TaskController::class, 'store']);
 Route::post('/normal-user/tasks/destroy/{id}', [App\Http\Controllers\NormalUser\TaskController::class, 'destroy']);
+Route::post('/normal-user/tasks/finish/{id}', [App\Http\Controllers\NormalUser\TaskController::class, 'finish']);
 
 Route::get('/admin-user/tasks', [App\Http\Controllers\AdminUser\TaskController::class, 'index']);
 

@@ -27,13 +27,20 @@
                         <p class="mr-2">詳細</p>
                         <p>{{ $task['description'] }}</p>
                     </div>
-                    <div>
+                    <div class="flex">
                         <form action="/normal-user/tasks/destroy/{{ $task['id'] }}" method="post">
                             @csrf
                             <button
                                 class="text-white
                             bg-red-500 border-0 py-2 px-4 focus:outline-none
                             hover:bg-red-600 rounded">削除</button>
+                        </form>
+                        <form action="/normal-user/tasks/finish/{{ $task['id'] }}" method="POST">
+                            @csrf
+                            <button
+                                class="text-white
+                            bg-green-500 border-0 py-2 px-4 focus:outline-none
+                            hover:bg-green-600 rounded">完了</button>
                         </form>
                     </div>
                 </div>
