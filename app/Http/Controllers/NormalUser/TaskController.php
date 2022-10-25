@@ -11,7 +11,7 @@ class TaskController extends Controller
 {
     public function index()
     {
-        $tasks = Tasks::where('user_id', Auth::id())->get()->toArray();
+        $tasks = Tasks::where('user_id', '=', Auth::id())->where('is_finished', '=', false)->get()->toArray();
 
         return view('NormalUser.tasks', ['tasks' => $tasks]);
     }
@@ -32,6 +32,16 @@ class TaskController extends Controller
     public function destroy($id)
     {
         Tasks::findOrFail($id)->delete();
+
+        return redirect('/normal-user/tasks');
+    }
+
+    public function finish($id)
+    {
+        $task = Tasks::findOrFail($id);
+
+        $task->is_finished = true;
+        $task->save();
 
         return redirect('/normal-user/tasks');
     }
