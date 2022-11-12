@@ -18,6 +18,7 @@ return new class extends Migration
             $table->string('title');
             $table->string('description')->nullable();
             $table->foreignId('user_id');
+            $table->string('file_path')->nullable();
             $table->softDeletes();
             $table->boolean('is_finished')->default(false);
             $table->timestamps();

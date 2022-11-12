@@ -13,6 +13,7 @@ class Tasks extends Model
         'title',
         'description',
         'user_id',
+        'file_path',
         'is_deleted',
         'is_finished'
     ];
