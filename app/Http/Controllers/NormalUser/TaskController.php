@@ -33,7 +33,7 @@ class TaskController extends Controller
             'title' => $request->input('task_title'),
             'description' => $request->input('task_description'),
             'user_id' => Auth::id(),
-            'file_path' => $fileName
+            'file_name' => $fileName
         ]);
 
         return redirect('/normal-user/tasks');

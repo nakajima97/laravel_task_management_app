@@ -46,8 +46,8 @@
                         </div>
                     </div>
                     <div>
-                        @if (!is_null($task['file_path']))
-                            <img src="{{ asset('storage/tasks/' . $task['file_path']) }}" alt="" width="100"
+                        @if (!is_null($task['file_name']))
+                            <img src="{{ asset('storage/tasks/' . $task['file_name']) }}" alt="" width="100"
                                 height="100">
                         @endif
                     </div>
